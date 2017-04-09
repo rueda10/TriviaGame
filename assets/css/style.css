@@ -1,0 +1,72 @@
+body {
+  text-align: center;
+}
+
+#outer {
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  width: 80%;
+  border: 5px solid green;
+  background-color: ivory;
+}
+
+#counter {
+  height: 80px;
+  overflow: hidden;
+  position: relative;
+  width: 80%;
+  border: 5px solid green;
+  background-color: ivory;
+  margin-bottom: 20px;
+}
+
+#outer[id] {
+  display: table;
+  position: static;
+}
+
+#counter[id] {
+  display: table;
+  position: static;
+}
+
+.middle[class] {
+  display: table-cell;
+  vertical-align: middle;
+  position: static;
+}
+
+#title {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 56pt;
+  padding: 20px;
+}
+
+#title i {
+  color: darkgreen;
+}
+
+.inner {
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  font-size: 20pt;
+}
+
+.my-button {
+  padding: 5px 30px;
+  background-color: darkgreen;
+  font-size: 20pt;
+}
+
+.answer {
+  cursor: pointer;
+}
+
+.answer:hover {
+  border: solid thin white;
+  background-color: darkgreen;
+  color: white;
+}
