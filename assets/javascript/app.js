@@ -1,6 +1,6 @@
 // Game variables
 var timeLimit = 15;
-const questionsURL = "https://opentdb.com/api.php?amount=1&category=22&difficulty=medium&type=multiple";
+const questionsURL = "https://opentdb.com/api.php?amount=1&category=22&type=multiple"
 var timer = undefined;
 var correctAnswers = 0;
 var incorrectAnswers = 0;
