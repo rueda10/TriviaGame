@@ -5,12 +5,14 @@ var timer = undefined;
 var correctAnswers = 0;
 var incorrectAnswers = 0;
 var unanswered = 0;
-// const PIXABAY_API_KEY = "5049677-f9ce3ede6f12257e56aa1e31d";
 
 function init() {
   correctAnswers = 0;
   incorrectAnswers = 0;
   unanswered = 0;
+  $("#correct").html(correctAnswers);
+  $("#incorrect").html(incorrectAnswers);
+  $("#unanswered").html(unanswered);
 }
 
 /**
@@ -46,7 +48,6 @@ function displayQuestions() {
     url: questionsURL,
     method: "GET"
   }).done(function(response) {
-    console.log(response);
     // Get API call data
     var result = response.results[0];
 
@@ -83,12 +84,10 @@ function displayQuestions() {
         clearTimeout(timer);
         if ($(this).find("div.col-xs-12").html() === result.correct_answer) {
           // correct answer was chosen. Increment correct answer var and display answer div
-          console.log("correct answer");
           correctAnswers++;
           displayCorrectAnswer(result.correct_answer, "Correct!");
         } else {
           // Incorrect answer was chosen. Increment incorrect answer var and display answer div
-          console.log("nope");
           incorrectAnswers++;
           displayCorrectAnswer(result.correct_answer, "Nope!");
         }
@@ -100,7 +99,7 @@ function displayQuestions() {
 
     // create 30 second countdown
     timeLimit = 30;
-    $("#counter > .middle > .inner").html("Time Remaining: " + timeLimit + " seconds");
+    $("#banner").html("Time Remaining: " + timeLimit + " seconds");
     timer = setInterval(function() {
       timeLimit--;
       if (timeLimit === 0) {
@@ -109,7 +108,7 @@ function displayQuestions() {
         unanswered++;
         displayCorrectAnswer(result.correct_answer, "Out of Time!");
       }
-      $("#counter > .middle > .inner").html("Time Remaining: " + timeLimit + " seconds");
+      $("#banner").html("Time Remaining: " + timeLimit + " seconds");
     }, 1000);
   });
 }
@@ -131,6 +130,10 @@ function displayCorrectAnswer(answer, message) {
   placeholderDiv.appendTo(row);
 
   $("#content").append(row);
+
+  $("#correct").html(correctAnswers);
+  $("#incorrect").html(incorrectAnswers);
+  $("#unanswered").html(unanswered);
 
   setTimeout(displayQuestions, 3000);
 }

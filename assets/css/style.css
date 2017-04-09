@@ -48,6 +48,15 @@ body {
   color: darkgreen;
 }
 
+#banner {
+  color: darkgreen;
+  font-size: 28pt;
+}
+
+#counters {
+  font-size: 18pt;
+}
+
 .inner {
   text-align: center;
   margin: auto;
