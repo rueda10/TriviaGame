@@ -11,7 +11,7 @@ body {
   overflow: hidden;
   position: relative;
   width: 80%;
-  border: 5px solid green;
+  border: 5px solid #357254;
   background-color: ivory;
   opacity: 0.9;
 }
@@ -21,7 +21,7 @@ body {
   overflow: hidden;
   position: relative;
   width: 80%;
-  border: 5px solid green;
+  border: 5px solid #357254;
   background-color: ivory;
   margin-bottom: 20px;
   opacity: 0.9;
@@ -51,7 +51,7 @@ body {
 }
 
 #title i {
-  color: darkgreen;
+  color: #357254;
 }
 
 #banner {
@@ -67,7 +67,7 @@ body {
 
 .my-button {
   padding: 5px 30px;
-  background-color: darkgreen;
+  background-color: #357254;
   font-size: 20pt;
 }
 
@@ -77,6 +77,6 @@ body {
 
 .answer:hover {
   border: solid thin white;
-  background-color: darkgreen;
+  background-color: #357254;
   color: white;
 }
