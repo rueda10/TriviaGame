@@ -10,9 +10,6 @@ function init() {
   correctAnswers = 0;
   incorrectAnswers = 0;
   unanswered = 0;
-  $("#correct").html(correctAnswers);
-  $("#incorrect").html(incorrectAnswers);
-  $("#unanswered").html(unanswered);
 }
 
 /**
@@ -130,10 +127,6 @@ function displayCorrectAnswer(answer, message) {
   placeholderDiv.appendTo(row);
 
   $("#content").append(row);
-
-  $("#correct").html(correctAnswers);
-  $("#incorrect").html(incorrectAnswers);
-  $("#unanswered").html(unanswered);
 
   setTimeout(displayQuestions, 3000);
 }

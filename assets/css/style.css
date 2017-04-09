@@ -1,4 +1,8 @@
 body {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   text-align: center;
 }
 
@@ -9,6 +13,7 @@ body {
   width: 80%;
   border: 5px solid green;
   background-color: ivory;
+  opacity: 0.9;
 }
 
 #counter {
@@ -19,6 +24,7 @@ body {
   border: 5px solid green;
   background-color: ivory;
   margin-bottom: 20px;
+  opacity: 0.9;
 }
 
 #outer[id] {
@@ -50,10 +56,6 @@ body {
 
 #banner {
   font-size: 28pt;
-}
-
-#counters {
-  font-size: 18pt;
 }
 
 .inner {
