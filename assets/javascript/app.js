@@ -6,6 +6,9 @@ var correctAnswers = 0;
 var incorrectAnswers = 0;
 var unanswered = 0;
 
+/**
+ * Initializes counters
+ */
 function init() {
   correctAnswers = 0;
   incorrectAnswers = 0;
@@ -131,6 +134,9 @@ function displayCorrectAnswer(answer, message) {
   setTimeout(displayQuestions, 3000);
 }
 
+/**
+ * Displays game over contents in div
+ */
 function displayGameOver() {
   $("#content").empty();
 
