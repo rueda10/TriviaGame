@@ -1,5 +1,5 @@
 // Game variables
-var timeLimit = 30;
+var timeLimit = 15;
 const questionsURL = "https://opentdb.com/api.php?amount=1&category=22&difficulty=medium&type=multiple";
 var timer = undefined;
 var correctAnswers = 0;
@@ -97,8 +97,8 @@ function displayQuestions() {
     // append contents to content div
     $("#content").append(contentDiv);
 
-    // create 30 second countdown
-    timeLimit = 30;
+    // create 15 second countdown
+    timeLimit = 15;
     $("#banner").html("Time Remaining: " + timeLimit + " seconds");
     timer = setInterval(function() {
       timeLimit--;
@@ -219,6 +219,11 @@ function shuffle(array) {
  */
 function isGameOver() {
   if (correctAnswers + incorrectAnswers + unanswered === 10) {
+    if (correctAnswers > (incorrectAnswers + unanswered)) {
+      $("#banner").html("Congratulations!");
+    } else {
+      $("#banner").html("Looks like you need more practice");
+    }
     return true;
   }
   return false;
